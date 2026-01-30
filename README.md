@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🖥️ IDENTITY_UNIT // WESLLEY EUGÊNIO
 
-## Getting Started
+> **Status:** SYSTEM_ONLINE
+> **Version:** 2.0.4
+> **Security_Level:** ENCRYPTED_ACCESS
 
-First, run the development server:
+Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida com tecnologias front-end para simular um ambiente de terminal de alto desempenho.
+
+---
+
+## 🛠️ TECH_STACK (Sistemas Operacionais)
+
+O desenvolvimento deste núcleo foi executado utilizando as seguintes tecnologias:
+
+* **Framework:** Next.js 15+ (App Router)
+* **Linguagem:** TypeScript
+* **Estilização:** Tailwind CSS
+* **Animações:** Framer Motion (Efeitos de Glitch e Typewriter)
+* **Ícones:** Lucide React
+
+---
+
+## ⚙️ ESPECIFICAÇÕES_TÉCNICAS
+
+O sistema foi projetado com foco em:
+* **Responsividade Adaptativa:** Interface otimizada para dispositivos móveis e desktop.
+* **HUD de Navegação:** Sistema de scroll snap integrado para transição suave entre módulos.
+* **Terminal de Identidade:** Digitação dinâmica de dados via Typewriter effect.
+* **Technical Vault:** Arquivo de projetos com efeitos de interferência digital (Glitch).
+
+---
+
+## 📂 ESTRUTURA_DO_NÚCLEO & INSTALAÇÃO
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# ESTRUTURA DE DIRETÓRIOS
+├── app/                # Estrutura principal (Layout e Home)
+├── components/         # Módulos de interface (Terminal, HUD, Projetos)
+├── public/             # Ativos estáticos e Identidade Visual
+└── data/               # Arquivos JSON de alimentação de dados
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# PROTOCOLO DE INICIALIZAÇÃO
+$git clone [https://github.com/Weslley-322/New-Portfolio.git$](https://github.com/Weslley-322/New-Portfolio.git$) cd New-Portfolio
+$ npm install
+$ npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# LOCAL_HOST_ACCESS: http://localhost:3000
