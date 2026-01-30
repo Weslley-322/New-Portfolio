@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* No Tailwind v4, o prefixo --color- é obrigatório para gerar utilitários de cor */
+  --color-cyber-black: #0a0a0a;
+  --color-cyber-red: #ff003c;
+  --color-cyber-cyan: #00f2ff;
+  --color-cyber-yellow: #fdee00;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Configurações Globais do Sistema */
+body {
+  /* REMOVEMOS o background daqui para o vídeo aparecer */
+  background: transparent; 
+  color: white;
+  font-family: monospace; 
+  overflow: hidden; 
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Garante que o container do Next não bloqueie a visão */
+#__next, body, html {
+  height: 100%;
+  width: 100%;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .neon-text-cyan {
+    /* Referencie com o prefixo color conforme definido no theme */
+    text-shadow: 0 0 10px var(--color-cyber-cyan), 0 0 20px var(--color-cyber-cyan);
+  }
+  .neon-text-red {
+    text-shadow: 0 0 10px var(--color-cyber-red), 0 0 20px var(--color-cyber-red);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes terminal-jitter {
+  0% { transform: translate(0); }
+  25% { transform: translate(-3px, 1px); }
+  50% { transform: translate(3px, -1px); opacity: 0.8; }
+  75% { transform: translate(-1px, 2px); }
+  100% { transform: translate(0); }
+}
+
+.terminal-card {
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.terminal-card:hover {
+  animation: terminal-jitter 0.15s steps(2) infinite;
+  border-color: #ff0000; /* Força o Cyber Red no hover */
+  box-shadow: 0 0 20px rgba(8, 0, 0, 0.2);
+}
+
+.terminal-card:hover::before {
+  content: "ACCESSING_DATA_STREAM...";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.08);
+  /* Linhas horizontais de monitor CRT */
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(255, 0, 0, 0.05) 2px
+  );
+  pointer-events: none;
+  z-index: 10;
 }
