@@ -16,7 +16,7 @@ Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida co
 O desenvolvimento deste núcleo foi executado utilizando as seguintes tecnologias:
 
 * **Framework:** Next.js 15+ (App Router)
-* **Linguagem:** TypeScript
+* **Linguagem:** JavaScript/TypeScript
 * **Estilização:** Tailwind CSS
 * **Animações:** Framer Motion (Efeitos de Glitch e Typewriter)
 * **Ícones:** Lucide React
