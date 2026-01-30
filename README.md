@@ -1,10 +1,13 @@
 # 🖥️ IDENTITY_UNIT // WESLLEY EUGÊNIO
 
+[![Status do Deploy](https://img.shields.io/static/v1?label=Vercel&message=SISTEMA_ONLINE&color=00f3ff&style=for-the-badge&logo=vercel)](https://identitysystemstablev204.vercel.app/)
+[![GitHub Repo](https://img.shields.io/static/v1?label=Repo&message=SOURCE_CODE&color=ff003c&style=for-the-badge&logo=github)](https://github.com/Weslley-322/New-Portfolio)
+
 > **Status:** SYSTEM_ONLINE
 > **Version:** 2.0.4
 > **Security_Level:** ENCRYPTED_ACCESS
 
-Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida com tecnologias front-end para simular um ambiente de terminal de alto desempenho.
+Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida com tecnologias front-end de ponta para simular um ambiente de terminal de alto desempenho.
 
 ---
 
