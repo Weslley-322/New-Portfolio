@@ -7,7 +7,7 @@
 > **Version:** 2.0.4
 > **Security_Level:** ENCRYPTED_ACCESS
 
-Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida com tecnologias front-end de ponta para simular um ambiente de terminal de alto desempenho.
+Bem-vindo ao protocolo de identidade digital. Esta interface foi desenvolvida com tecnologias front-end para simular um ambiente de terminal de alto desempenho.
 
 ---
 
