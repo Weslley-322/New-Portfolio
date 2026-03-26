@@ -1,0 +1,50 @@
+[
+  {
+    "id": "01",
+    "titulo": "Gerenciador Financeiro",
+    "descricao": "Sistema de organização financeira pessoal com interface intuitiva. Desenvolvido para desktop focado em performance e UX.",
+    "repositorio": "https://github.com/Weslley-322/Gerenciador-Financeiro",
+    "tecnologias": ["Html", "Css", "Js", "Electron"],
+    "categoria": "DESKTOP_APP"
+  },
+  {
+    "id": "02",
+    "titulo": "Photoviewer-lite",
+    "descricao": "Visualizador de imagens leve e minimalista. Focado em velocidade de carregamento e simplicidade de uso.",
+    "repositorio": "https://github.com/Weslley-322/PhotoViewer-Lite",
+    "tecnologias": ["Html", "Css", "Js", "Electron"],
+    "categoria": "UTILITY"
+  },
+  {
+    "id": "03",
+    "titulo": "Habit Tracker Gamificado",
+    "descricao": "App mobile que utiliza XP e níveis para incentivar a disciplina diária. Inclui sistema de streaks, notificações e persistência local.",
+    "repositorio": "https://github.com/Weslley-322/Habit-tracker",
+    "tecnologias": ["React Native", "Expo", "AsyncStorage", "JavaScript"],
+    "categoria": "MOBILE_APP"
+  },
+  {
+    "id": "04",
+    "titulo": "Bloco de Notas Mobile",
+    "descricao": "Aplicação mobile para gestão de notas rápidas. Focada em persistência de dados eficiente e navegação fluida entre telas.",
+    "repositorio": "https://github.com/Weslley-322/BlocoDeNotas_Mobile",
+    "tecnologias": ["React Native", "Expo", "Hooks", "Navigation"],
+    "categoria": "MOBILE_APP"
+  },
+  {
+    "id": "05",
+    "titulo": "Oficina em Java",
+    "descricao": "Simulação robusta de operações de oficina utilizando Programação Orientada a Objetos para gestão de ordens e serviços.",
+    "repositorio": "https://github.com/Weslley-322/Java-POO",
+    "tecnologias": ["Java", "POO", "Logic"],
+    "categoria": "SYSTEM_SIMULATION"
+  },
+  {
+    "id": "06",
+    "titulo": "Página Made in Abyss",
+    "descricao": "Projeto de design front-end focado em estética e fidelidade visual à obra original, utilizando apenas tecnologias core.",
+    "repositorio": "https://github.com/Weslley-322/Made-in-Abyss",
+    "tecnologias": ["Html", "Css"],
+    "categoria": "FRONT_END"
+  }
+]
