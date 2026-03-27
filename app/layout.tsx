@@ -15,11 +15,16 @@ export const metadata = {
   title: "WESLLEY EUGÊNIO // IDENTITY_UNIT",
   description: "Portfólio de desenvolvimento front-end. Acessando protocolos de interfaces escaláveis.",
   icons: {
-    icon: "/icon.png", 
-  },
+  icon: [
+    { url: "/favicon.ico" },
+    { url: "/favicon.svg", type: "image/svg+xml" },
+    { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+  ],
+  apple: "/apple-touch-icon.png",
+},
+manifest: "/public/site.webmanifest",
 };
 
-// AJUSTE AQUI: Adicionamos a tipagem do React para o children
 export default function RootLayout({
   children,
 }: {
