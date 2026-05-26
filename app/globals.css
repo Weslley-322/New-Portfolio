@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Cores principais atualizadas para a nova identidade */
+  --color-cyber-black:   #05050a;
+  --color-cyber-dark:    #0a0514;
+
+  --color-cyber-purple:  #a855f7;
+  --color-cyber-purple-dim: rgba(168, 85, 247, 0.12);
+
+  --color-cyber-orange:  #ff6a00;
+  --color-cyber-orange-dim: rgba(255, 106, 0, 0.12);
+
+  --color-cyber-cyan:    #00e5ff;
+  --color-cyber-cyan-dim: rgba(0, 229, 255, 0.08);
+
+  /* Texto */
+  --color-cyber-text:    #9ab0c4;
+  --color-cyber-text-dim: #3b3b54;
+
+  /* Fontes */
+  --font-orbitron:   'Orbitron', sans-serif;
+  --font-mono:       'Share Tech Mono', monospace;
+  --font-rajdhani:   'Rajdhani', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--color-cyber-black);
+  color: var(--color-cyber-text);
+  font-family: var(--font-mono);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  animation: crt-flicker 10s infinite;
+}
+
+#__next, body, html {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes crt-flicker {
+  0%, 100%  { opacity: 1;    }
+  92%       { opacity: 1;    }
+  93%       { opacity: 0.97; }
+  94%       { opacity: 1;    }
+  97%       { opacity: 0.98; }
+}
+
+@keyframes glitch-before {
+  0%, 89%, 100% { transform: translate(0);        opacity: 0; }
+  90%           { transform: translate(-3px, 2px); opacity: 1; }
+  92%           { transform: translate(3px, -1px); opacity: 1; }
+  94%           { transform: translate(0);         opacity: 0; }
+}
+@keyframes glitch-after {
+  0%, 91%, 100% { transform: translate(0);        opacity: 0; }
+  92%           { transform: translate(3px, -2px); opacity: 1; }
+  94%           { transform: translate(-3px, 1px); opacity: 1; }
+  96%           { transform: translate(0);         opacity: 0; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+@keyframes status-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%      { opacity: 0.4; transform: scale(0.75); }
+}
+
+@keyframes card-sweep {
+  from { left: -110%; }
+  to   { left:  110%; }
+}
+
+@keyframes scan-line {
+  0%        { top: -2px; opacity: 0;    }
+  5%        { opacity: 0.18; }
+  95%       { opacity: 0.18; }
+  100%      { top: 100%;  opacity: 0;    }
+}
+
+@keyframes ring-expand {
+  0%   { transform: scale(0.5); opacity: 0.3; }
+  100% { transform: scale(1.5); opacity: 0;   }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Glows de Texto adaptados */
+  .neon-text-purple {
+    text-shadow:
+      0 0 6px var(--color-cyber-purple),
+      0 0 18px rgba(168, 85, 247, 0.4);
+  }
+  .neon-text-orange {
+    text-shadow:
+      0 0 6px var(--color-cyber-orange),
+      0 0 18px rgba(255, 106, 0, 0.4);
+  }
+  .neon-text-cyan {
+    text-shadow:
+      0 0 6px var(--color-cyber-cyan),
+      0 0 18px rgba(0, 229, 255, 0.4);
+  }
+
+  /* Bordas neon */
+  .neon-border-purple {
+    border: 1px solid var(--color-cyber-purple);
+    box-shadow:
+      0 0 8px rgba(168, 85, 247, 0.3),
+      inset 0 0 8px rgba(168, 85, 247, 0.05);
+  }
+  .neon-border-orange {
+    border: 1px solid var(--color-cyber-orange);
+    box-shadow:
+      0 0 8px rgba(255, 106, 0, 0.3),
+      inset 0 0 8px rgba(255, 106, 0, 0.05);
+  }
+
+  .font-orbitron  { font-family: var(--font-orbitron); }
+  .font-rajdhani  { font-family: var(--font-rajdhani); }
+  .font-mono-cyber { font-family: var(--font-mono); }
+
+  .corner-cut {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+  .status-dot-purple {
+    background: var(--color-cyber-purple);
+    box-shadow: 0 0 8px var(--color-cyber-purple);
+  }
+  .status-dot-orange {
+    background: var(--color-cyber-orange);
+    box-shadow: 0 0 8px var(--color-cyber-orange);
+  }
+  .status-dot-cyan {
+    background: var(--color-cyber-cyan);
+    box-shadow: 0 0 8px var(--color-cyber-cyan);
+  }
+
+  /* Cursor herdando a cor roxa principal */
+  .terminal-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background: var(--color-cyber-purple);
+    vertical-align: middle;
+    margin-left: 3px;
+    animation: blink 1s step-end infinite;
+  }
+
+  .scan-line {
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-cyber-purple),
+      transparent
+    );
+    animation: scan-line 8s linear infinite;
+    pointer-events: none;
+  }
+}
+
+/* Cartões do Terminal atualizados para Roxo */
+.terminal-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  background: rgba(5, 5, 10, 0.85);
+  transition:
+    border-color 0.3s ease,
+    box-shadow   0.3s ease,
+    background   0.3s ease;
+}
+
+.terminal-card::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: -110%;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.06),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 1;
+  transition: none; 
+}
+
+.terminal-card:hover::before {
+  animation: card-sweep 0.5s ease forwards;
+}
+
+.terminal-card:hover {
+  border-color: var(--color-cyber-purple);
+  background: rgba(10, 5, 20, 0.95);
+  box-shadow:
+    0 0 20px rgba(168, 85, 247, 0.12),
+    inset 0 0 20px rgba(168, 85, 247, 0.03);
+}
+
+.terminal-card .card-corner {
+  position: absolute;
+  width: 12px; height: 12px;
+  border-color: var(--color-cyber-purple);
+  border-style: solid;
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+.terminal-card:hover .card-corner { opacity: 0.9; }
+.terminal-card .card-corner.tl { top: 0; left: 0;  border-width: 2px 0 0 2px; }
+.terminal-card .card-corner.tr { top: 0; right: 0; border-width: 2px 2px 0 0; }
+.terminal-card .card-corner.bl { bottom: 0; left: 0;  border-width: 0 0 2px 2px; }
+.terminal-card .card-corner.br { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+.terminal-card .card-notch {
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 18px 18px 0;
+  border-color: transparent rgba(168, 85, 247, 0.2) transparent transparent;
+  transition: border-color 0.3s;
+}
+.terminal-card:hover .card-notch {
+  border-color: transparent var(--color-cyber-purple) transparent transparent;
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.glitch::before {
+  color: var(--color-cyber-cyan);
+  animation: glitch-before 6s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+}
+.glitch::after {
+  color: var(--color-cyber-orange);
+  animation: glitch-after 6s infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+}
+
+::selection {
+  background: var(--color-cyber-orange);
+  color: #000;
+}
