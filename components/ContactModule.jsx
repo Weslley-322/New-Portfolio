@@ -1,5 +1,4 @@
 "use client";
-
 const links = [
   {
     label: "GITHUB_UPLINK",
@@ -17,12 +16,10 @@ const links = [
     url: "https://wa.me/5581999277331",
   },
 ];
-
 export default function ContactModule() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full max-w-4xl px-4 text-center">
       
-      {/* Uplink rings expandindo em Roxo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         {[0, 1, 2].map((i) => (
           <div
@@ -36,20 +33,16 @@ export default function ContactModule() {
           />
         ))}
       </div>
-
       <p className="font-orbitron text-[9px] tracking-[0.45em] text-cyber-purple/80 mb-4 uppercase">
         / / PROTOCOL_UPLINK
       </p>
-
       <h2 className="font-orbitron font-black text-white neon-text-purple mb-3
                      text-[clamp(2rem,3.5vw,3.8rem)] leading-none">
         <span className="glitch" data-text="UPLINK_EXTERNO">UPLINK_EXTERNO</span>
       </h2>
-
       <p className="text-cyber-text-dim text-[12px] tracking-[0.08em] mb-12">
         Iniciando ponte de comunicação externa...
       </p>
-
       <div className="flex gap-5 justify-center flex-wrap relative z-10">
         {links.map((link) => (
           <a
@@ -67,16 +60,13 @@ export default function ContactModule() {
             <div className="card-corner tl" />
             <div className="card-corner br" />
 
-            <div className="absolute inset-0 bg-linear-to-br from-cyber-purple-dim to-transparent
+            <div className="absolute inset-0 z-0 bg-linear-to-br from-cyber-purple-dim to-transparent
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300
                             pointer-events-none" />
 
-            {/* Ícone centralizado e destacado */}
             <span className="relative z-10 text-[32px] text-cyber-orange leading-none filter drop-shadow-[0_0_8px_rgba(255,106,0,0.2)] group-hover:scale-110 transition-transform">
               {link.icon}
             </span>
-
-            {/* Label principal do Uplink */}
             <span className="relative z-10 font-orbitron text-[10px] tracking-[0.3em]
                              text-cyber-cyan uppercase font-semibold">
               {link.label}
