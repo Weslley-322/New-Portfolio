@@ -1,7 +1,7 @@
 # 🖥️ IDENTITY_UNIT // WESLLEY EUGÊNIO
 
-[![Status do Deploy](https://img.shields.io/static/v1?label=Vercel&message=SISTEMA_ONLINE&color=ff8c00&style=for-the-badge&logo=vercel)](https://identitysystemstablev204.vercel.app/)
-[![GitHub Repo](https://img.shields.io/static/v1?label=Repo&message=SOURCE_CODE&color=ff8c00&style=for-the-badge&logo=github)](https://github.com/Weslley-322/New-Portfolio)
+[![Status do Deploy](https://img.shields.io/static/v1?label=Vercel&message=SISTEMA_ONLINE&color=a855f7&style=for-the-badge&logo=vercel)](https://identitysystemstablev204.vercel.app/)
+[![GitHub Repo](https://img.shields.io/static/v1?label=Repo&message=SOURCE_CODE&color=a855f7&style=for-the-badge&logo=github)](https://github.com/Weslley-322/New-Portfolio)
 
 > **Status:** SYSTEM_ONLINE
 > **Version:** 2.0.4
@@ -43,7 +43,7 @@ O sistema foi projetado com foco em:
 └── data/         # Arquivos JSON de alimentação de dados
 
 # PROTOCOLO DE INICIALIZAÇÃO
-$git clone [https://github.com/Weslley-322/New-Portfolio.git$](https://github.com/Weslley-322/New-Portfolio.git$) cd New-Portfolio
+$ git clone [https://github.com/Weslley-322/New-Portfolio.git$](https://github.com/Weslley-322/New-Portfolio.git$) cd New-Portfolio
 $ npm install
 $ npm run dev
 
