@@ -20,6 +20,7 @@ export default function ContactModule() {
   return (
     <div className="relative flex flex-col items-center justify-center w-full max-w-4xl px-4 text-center">
       
+      {/* Uplink rings expandindo em Roxo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
         {[0, 1, 2].map((i) => (
           <div
@@ -60,13 +61,16 @@ export default function ContactModule() {
             <div className="card-corner tl" />
             <div className="card-corner br" />
 
+            {/* z-0 garante que o overlay fique abaixo do ícone e do label */}
             <div className="absolute inset-0 z-0 bg-linear-to-br from-cyber-purple-dim to-transparent
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300
                             pointer-events-none" />
 
-            <span className="relative z-10 text-[32px] text-cyber-orange leading-none filter drop-shadow-[0_0_8px_rgba(255,106,0,0.2)] group-hover:scale-110 transition-transform">
+            {/* Ícone centralizado e destacado */}
+            <span className="relative z-10 text-[32px] text-cyber-orange leading-none filter drop-shadow-[0_0_8px_rgba(255,106,0,0.8)] group-hover:drop-shadow-[0_0_12px_rgba(255,106,0,0.9)] transition-all">
               {link.icon}
             </span>
+            {/* Label principal do Uplink */}
             <span className="relative z-10 font-orbitron text-[10px] tracking-[0.3em]
                              text-cyber-cyan uppercase font-semibold">
               {link.label}
