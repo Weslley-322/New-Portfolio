@@ -13,7 +13,7 @@ const links = [
   {
     label: "LINKEDIN_COMMS",
     icon: "⧉",
-    url: "www.linkedin.com/in/weslley-eugênio-11aaab418",
+    url: "https://www.linkedin.com/in/weslley-eug%C3%AAnio-11aaab418/",
   },
   {
     label: "WHATSAPP_COMMS",
