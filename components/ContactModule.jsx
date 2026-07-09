@@ -11,6 +11,11 @@ const links = [
     url: "mailto:weslleyeugenio03@gmail.com",
   },
   {
+    label: "LINKEDIN_COMMS",
+    icon: "⧉",
+    url: "www.linkedin.com/in/weslley-eugênio-11aaab418",
+  },
+  {
     label: "WHATSAPP_COMMS",
     icon: "◈",
     url: "https://wa.me/5581999277331",
